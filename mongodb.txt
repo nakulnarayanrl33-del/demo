@@ -1,0 +1,13 @@
+
+
+db.books.find({"year":{$gt:2010}}).pretty()
+
+db.books.findOne({author:"Jane Austen"})
+
+db.books.find({copies:{$gt:5},year:{$lte:2000}}).pretty()
+
+db.books.find({$or:[copies:{$lt:3}},available:false]}).pretty()
+
+db.books.updateOne({title:"Data Structures"},{$set:{copies:10}})
+
+db.books.deleteOne({author:"Unknown"})
