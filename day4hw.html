@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Simple Game Result Generator</h2>
+<p id="demo"></p>
+
+<script>
+
+let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+
+let userScoreString = "45";
+
+let userScore = Number(userScoreString);
+
+let difference = Math.abs(mysteryLevel - userScore);
+
+let squareRoot = Math.sqrt(userScore);
+console.log(squareRoot);
+
+console.log(Math.PI);
+
+let implicitResult = "20" * 5;
+
+let highest = Math.max(10, 20, mysteryLevel);
+let lowest = Math.min(10, 20, mysteryLevel);
+
+document.getElementById("demo").innerHTML =
+"Mystery Level: " + mysteryLevel + "<br>" +
+"User Score: " + userScore + "<br>" +
+"Absolute Difference: " + difference + "<br>" +
+"Implicit Result: " + implicitResult + "<br>" +
+"Highest Value: " + highest + "<br>" +
+"Lowest Value: " + lowest;
+
+</script>
+
+</body>
+</html>
