@@ -1,35 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
-  const foods = ["Pizza", "Burger", "Biriyani", "Ice Cream", "Pasta"];
+  const userName = "Nakul";
 
-  const [message, setMessage] = useState(
-    "Select a food that you love!"
-  );
+  console.log("React app started");
 
-  const handleClick = (food) => {
-    setMessage(`I love ${food}!`);
+  const headingStyle = {
+    color: "blue",
+    textAlign: "center",
+    fontWeight: "bold",
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "30px" }}>
-      <h2>My Favorite Foods</h2>
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div className="card shadow p-4 text-center" style={{ width: "30rem" }}>
+        
+        <h1 style={headingStyle}>
+          Welcome to React Learning, {userName}
+        </h1>
 
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {foods.map((food, index) => (
-          <li key={index} style={{ margin: "10px" }}>
-            {food}
-            <button
-              onClick={() => handleClick(food)}
-              style={{ marginLeft: "10px" }}
-            >
-              Love It
-            </button>
-          </li>
-        ))}
-      </ul>
 
-      <h3>{message}</h3>
+        <p className="text-primary fw-bold">
+          This is your first card with images and styles!
+        </p>
+
+      </div>
     </div>
   );
 }
