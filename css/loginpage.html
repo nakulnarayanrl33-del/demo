@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .content{height: 100%;}
+        .login-form{
+            float: right;
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+        .login-inner{
+            width:80%;
+            height:320px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;}
+            .login-head{
+                font-size: xx-large;
+                margin-bottom: 25px;
+                color: orangered;
+            }
+        label{display: block;
+        margin-bottom: 5px;}
+        button{background-color: orangered;
+        color: white;}
+        input[type="email"],
+        input[type="password"],
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .remember{
+            margin-bottom: 20px;
+        }
+         @media (min-width: 768px) {
+            .container {
+                width: 80% ;
+                height: 450px ;
+                flex-direction: row ;
+            }
+            .left {
+                display: block ;
+                width: 50% ;
+            }
+            .right {
+                width: 50%;
+            }
+        }
+            
+        
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="login-form">
+            <div class="login-inner">
+            </div class="login-head">
+            LOGIN FORM
+            </div>
+            <div class="email">
+                <label>EMAIL:</label>
+                <input type="email" placeholder="enter emil">
+            </div>
+            <div class="password">
+                <label>PASSWORD:</label>
+                <input type="password" placeholder="enter password">
+            </div>
+            <div class="remember">
+                <input type="checkbox">REMEMBER ME
+            </div>
+            <button>LOGIN</button>
+        </div>
+    </div>
+    
+</body>
+</html>

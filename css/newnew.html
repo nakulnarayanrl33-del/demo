@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Right Side Login</title>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgb(178, 118, 178),
+    rgb(220, 223, 148))
+    
+}
+
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-form {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: #f5f5f5;
+    text-align: left;
+}
+
+
+.login-inner {
+    width: 80%;
+    height: 320px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+
+.login-head {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: orangered;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    background: orangered;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+
+.remember {
+    margin-bottom: 20px;
+}
+@media only screen and (max-width:600px){
+    body{display: block;}
+    .login-form{
+        float: none;
+        width: 100%;
+    }
+    
+}
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+    <div class="login-form">
+
+        <div class="login-inner">
+
+            <div class="login-head">
+                LOGIN FORM
+            </div>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter password">
+
+            <div class="remember">
+                <input type="checkbox" id="remember">Remember Me
+               
+            </div>
+
+            <button>LOGIN</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Phone</title>
+</head>
+<body>
+
+<h1>Edit Phone</h1>
+
+<form action="/edit/<%= phone.id %>?_method=PUT" method="POST">
+
+    <input
+        type="text"
+        name="name"
+        value="<%= phone.name %>"
+    >
+
+    <br><br>
+
+    <input
+        type="text"
+        name="description"
+        value="<%= phone.description %>"
+    >
+
+    <br><br>
+
+    <input
+        type="number"
+        name="price"
+        value="<%= phone.price %>"
+    >
+
+    <br><br>
+
+    <button>Update</button>
+
+</form>
+
+</body>
+</html>

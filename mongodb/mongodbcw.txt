@@ -1,0 +1,27 @@
+
+db.Clothes.find(
+    { price: { $gt: 500 } },
+    { _id: 0, name: 1, category: 1, price: 1, stock: 1, discount: 1 }
+).pretty()
+
+db.Clothes.find({ price: { $lte: 300 }, stock: { $gt: 10 }})
+
+db.Clothes.find({$or: [{ price: { $lt: 200 } }, { discount: true }]})
+
+db.Clothes.update({ name: "Denim Jeans" },{ $set: { stock: 50 } })
+
+var item = db.Clothes.findOne({ name: "Leather Jacket" });
+
+
+db.Clothes.replaceOne(
+    { _id: item._id },
+    item
+)
+
+db.Clothes.deleteOne({ stock: 0 })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+clothing
+Selection deleted

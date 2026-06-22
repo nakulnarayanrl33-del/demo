@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f5;
+        }
+
+        .container {
+            display: flex;
+            width: 750px;
+            height: 420px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Image side */
+        .image-box {
+            width: 50%;
+            background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c")
+                        center/cover no-repeat;
+        }
+
+        /* Login side */
+        .login-box {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-box label {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .login-box input:focus {
+            border-color: #007bff;
+        }
+
+        .remember {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="image-box"></div>
+
+    <div class="login-box">
+        <h2>Login Form</h2>
+
+        <label>Email :</label>
+        <input type="text" placeholder="Enter email">
+
+        <label>Password :</label>
+        <input type="password" placeholder="Enter password">
+
+        <div class="remember">
+            <input type="checkbox"> Remember Me
+        </div>
+
+        <button>Login</button>
+    </div>
+
+</div>
+
+</body>
+</html>

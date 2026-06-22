@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Shop</title>
+</head>
+<body>
+
+<h1>Mobile Shop</h1>
+
+<a href="/add">Add New Phone</a>
+
+<hr>
+
+<% phones.forEach(phone => { %>
+
+<h3><%= phone.name %></h3>
+
+<p><%= phone.description %></p>
+
+<p>₹<%= phone.price %></p>
+
+<a href="/edit/<%= phone.id %>">Edit</a>
+
+<form action="/delete/<%= phone.id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>
+
+<hr>
+
+<% }) %>
+
+</body>
+</html>
